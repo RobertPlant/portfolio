@@ -1,0 +1,13 @@
+#intro {
+    display: none;
+}
+
+.line {
+    margin: 0 !important;
+}
+
+.align_center {
+    padding: 10px;
+    width: 500px;
+    margin: 0 auto;
+}
