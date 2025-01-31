@@ -148,6 +148,72 @@
           </div>
           <div class="row-fluid">
             <div class="span12 content">
+              <div class="portfolioPGP collapse out">
+                <button
+                  type="button"
+                  class="pull-right btn btn-danger"
+                  data-toggle="collapse"
+                  data-target=".portfolioPGP"
+                  onclick="$('#portfolioTabs').collapse('show')"
+                >
+                  Return to Portfolio List
+                </button>
+                <h2>PGP Document Storage</h2>
+
+                <p><strong>When: 2019</strong></p>
+
+                <p>
+                  <strong>Contribution: </strong>Design and development of
+                  entire system
+                </p>
+
+                <p><strong>Technologies: </strong>Node.js, AWS S3, PGP, HSM</p>
+
+                <p>
+                  <strong>Overview:</strong>
+                  I developed a highly secure document storage solution that
+                  leveraged PGP encryption and AWS S3, ensuring that sensitive
+                  files were never transmitted or stored in an unencrypted
+                  state.
+                </p>
+
+                <p>
+                  <strong>Key Features & Contributions:</strong>
+                </p>
+
+                <p>
+                  <strong>End-to-End Encryption:</strong> Implemented a system
+                  where files were encrypted before leaving the user's browser
+                  using PGP (Pretty Good Privacy). This meant that even if
+                  intercepted during transmission, the files remained unreadable
+                  to unauthorized parties.
+                </p>
+                <p>
+                  <strong>Secure Storage with AWS S3:</strong> Utilized signed
+                  URLs to facilitate direct uploads to Amazon S3, preventing
+                  unnecessary exposure of unencrypted data to backend systems.
+                </p>
+                <p>
+                  <strong>Hardware Security Module (HSM) Integration:</strong>
+                  Allowed encryption keys to be securely managed using HSMs,
+                  ensuring the highest level of protection for private keys
+                  while maintaining ease of access for authorized users.
+                </p>
+                <p>
+                  <strong>Zero Trust Data Protection:</strong> Even if the S3
+                  storage was compromised, the encrypted data remained useless
+                  to an attacker, as decryption could only occur with the user's
+                  private key.
+                </p>
+
+                <p>
+                  This system was designed with security, scalability, and
+                  efficiency in mind, allowing for seamless document encryption
+                  and retrieval while maintaining compliance with strict data
+                  protection standards.
+                </p>
+              </div>
+
               <div class="portfolioHyperion collapse out">
                 <button
                   type="button"
@@ -320,7 +386,7 @@
                   made the creation of these systems very intuitive.
                 </p>
 
-                <div id="attachment_77" class="align_center">
+                <div class="align_center">
                   <a href="img/projects/warrantgroup/extjs_grid.png">
                     <img
                       class="size-full"
@@ -350,7 +416,7 @@
                   plugin for ExtJS.
                 </p>
 
-                <div id="attachment_79" class="align_center">
+                <div class="align_center">
                   <a href="img/projects/warrantgroup/extensible.png">
                     <img
                       class="size-full"
@@ -598,108 +664,117 @@
               </div>
 
               <div id="portfolioTabs" class="collapse in">
-                <ul class="portfolio">
-                  <li class="span4">
-                    <div class="item">
-                      <a
-                        href="#/portfolio"
-                        data-nav="scroll"
-                        data-toggle="collapse"
-                        data-target=".portfolioHyperion"
-                        onclick="$('#portfolioTabs').collapse('hide')"
-                      >
-                        <img src="img/projects/sykes/hyperion.png" alt="" />
-                      </a>
+                <div class="portfolio">
+                  <div>
+                    <a
+                      href="#/portfolio"
+                      data-nav="scroll"
+                      data-toggle="collapse"
+                      data-target=".portfolioPGP"
+                      onclick="$('#portfolioTabs').collapse('hide')"
+                    >
+                      <img src="img/projects/dotfive/pgp.png" alt="" />
+                    </a>
 
-                      <h3>Hyperion API</h3>
+                    <h3>PGP Document storage</h3>
 
-                      <p>PHP backend API handling bookings</p>
-                    </div>
-                  </li>
-                  <li class="span4">
-                    <div class="item">
-                      <a
-                        href="#/portfolio"
-                        data-nav="scroll"
-                        data-toggle="collapse"
-                        data-target=".portfolioTwitter"
-                        onclick="$('#portfolioTabs').collapse('hide')"
-                      >
-                        <img
-                          src="img/projects/clinicaljustice/dataMiner.png"
-                          alt=""
-                        />
-                      </a>
+                    <p>Node.js PGP storage solution</p>
+                  </div>
 
-                      <h3>Twitter Data Miner</h3>
+                  <div>
+                    <a
+                      href="#/portfolio"
+                      data-nav="scroll"
+                      data-toggle="collapse"
+                      data-target=".portfolioHyperion"
+                      onclick="$('#portfolioTabs').collapse('hide')"
+                    >
+                      <img src="img/projects/sykes/hyperion.png" alt="" />
+                    </a>
 
-                      <p>Java implementation of data scraping with JTwitter</p>
-                    </div>
-                  </li>
-                  <li class="span4">
-                    <div class="item">
-                      <a
-                        href="#/portfolio"
-                        data-nav="scroll"
-                        data-toggle="collapse"
-                        data-target=".portfolioIngot2"
-                        onclick="$('#portfolioTabs').collapse('hide')"
-                      >
-                        <img src="img/projects/ingot/ingot2.png" alt="" />
-                      </a>
+                    <h3>Hyperion API</h3>
 
-                      <h3>Ingot 2</h3>
+                    <p>PHP backend API handling bookings</p>
+                  </div>
 
-                      <p>
-                        Freight Forwarding System utilising Symfony2 and ExtJs
-                        4.2
-                      </p>
-                    </div>
-                  </li>
-                  <li class="span4">
-                    <div class="item">
-                      <a
-                        href="#/portfolio"
-                        data-nav="scroll"
-                        data-toggle="collapse"
-                        data-target=".portfolioClinicalJustice"
-                        onclick="$('#portfolioTabs').collapse('hide')"
-                      >
-                        <img
-                          src="img/projects/clinicaljustice/clinicalJustice.png"
-                          alt=""
-                        />
-                      </a>
+                  <div>
+                    <a
+                      href="#/portfolio"
+                      data-nav="scroll"
+                      data-toggle="collapse"
+                      data-target=".portfolioTwitter"
+                      onclick="$('#portfolioTabs').collapse('hide')"
+                    >
+                      <img
+                        src="img/projects/clinicaljustice/dataMiner.png"
+                        alt=""
+                      />
+                    </a>
 
-                      <h3>Clinical Justice</h3>
+                    <h3>Twitter Data Miner</h3>
 
-                      <p>Leads management website written in PHP</p>
-                    </div>
-                  </li>
-                  <li class="span4">
-                    <div class="item">
-                      <a
-                        href="#/portfolio"
-                        data-nav="scroll"
-                        data-toggle="collapse"
-                        data-target=".portfolioRecipeIntoReality"
-                        onclick="$('#portfolioTabs').collapse('hide')"
-                      >
-                        <img
-                          src="img/projects/chicory/recipeIntoReality.png"
-                          alt=""
-                        />
-                      </a>
+                    <p>Java implementation of data scraping with JTwitter</p>
+                  </div>
 
-                      <h3>Chicory</h3>
+                  <div>
+                    <a
+                      href="#/portfolio"
+                      data-nav="scroll"
+                      data-toggle="collapse"
+                      data-target=".portfolioIngot2"
+                      onclick="$('#portfolioTabs').collapse('hide')"
+                    >
+                      <img src="img/projects/ingot/ingot2.png" alt="" />
+                    </a>
 
-                      <p>
-                        Frontend Responsive Design with Twitter Bootstrap, CCS3
-                        and jQuery
-                      </p>
-                    </div>
-                  </li>
-                </ul>
+                    <h3>Ingot 2</h3>
+
+                    <p>
+                      Freight Forwarding System utilising Symfony2 and ExtJs 4.2
+                    </p>
+                  </div>
+
+                  <div>
+                    <a
+                      href="#/portfolio"
+                      data-nav="scroll"
+                      data-toggle="collapse"
+                      data-target=".portfolioClinicalJustice"
+                      onclick="$('#portfolioTabs').collapse('hide')"
+                    >
+                      <img
+                        src="img/projects/clinicaljustice/clinicalJustice.png"
+                        alt=""
+                      />
+                    </a>
+
+                    <h3>Clinical Justice</h3>
+
+                    <p>Leads management website written in PHP</p>
+                  </div>
+
+                  <div>
+                    <a
+                      href="#/portfolio"
+                      data-nav="scroll"
+                      data-toggle="collapse"
+                      data-target=".portfolioRecipeIntoReality"
+                      onclick="$('#portfolioTabs').collapse('hide')"
+                    >
+                      <img
+                        src="img/projects/chicory/recipeIntoReality.png"
+                        alt=""
+                      />
+                    </a>
+
+                    <h3>Chicory</h3>
+
+                    <p>
+                      Frontend Responsive Design with Twitter Bootstrap, CCS3
+                      and jQuery
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

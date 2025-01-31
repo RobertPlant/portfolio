@@ -25,3 +25,14 @@ textarea {
     width: 100% !important;
     height: 100px !important;
 }
+
+.portfolio {
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+.portfolio > div {
+    flex: 0 0 30%;
+}
