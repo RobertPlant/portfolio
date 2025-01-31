@@ -148,6 +148,58 @@
           </div>
           <div class="row-fluid">
             <div class="span12 content">
+              <div class="portfolioHyperion collapse out">
+                <button
+                  type="button"
+                  class="pull-right btn btn-danger"
+                  data-toggle="collapse"
+                  data-target=".portfolioHyperion"
+                  onclick="$('#portfolioTabs').collapse('show')"
+                >
+                  Return to Portfolio List
+                </button>
+                <h2>Hyperion API</h2>
+
+                <p><strong>When: </strong>2015 – 2016</p>
+
+                <p>
+                  <strong>Contribution: </strong> Creation of fundamental
+                  systems within the API such as transformations and API
+                  integrations into external systems.
+                </p>
+
+                <p><strong>Technologies: </strong>PHP, MySQL, and RabbitMQ.</p>
+
+                <p>
+                  <strong>Requirements: </strong>This API was used to talk
+                  between existing API's and products, it was used as an
+                  external endpoint for systems such as emails and websites to
+                  provide booking details.
+                </p>
+
+                <p>
+                  This API was setup to replace existing systems and legacy API
+                  endpoints and to be able to replace sections of the existing
+                  site into a system which was easier to maintain and to devleop
+                  on. The whole product was developed utilizing TDD to be able
+                  to ensure changes were suitable and regressions were not
+                  introduced.
+                </p>
+
+                <p>
+                  One of the sections that I worked on was to translate an
+                  existing API endpoint into a format that could be used for
+                  another system which required the data to be in a different
+                  format. I created a middleware that interpreted the request
+                  data and translated it into a format that Hyperon could use,
+                  the normal endpoint would be called from this returning the
+                  data. The middleware could also translate the returning data
+                  if required. The translations could be performed based on the
+                  customer calling the endpoint and the translation mappings can
+                  inherit from each other and be expanded upon.
+                </p>
+              </div>
+
               <div class="portfolioTwitter collapse out">
                 <button
                   type="button"
@@ -547,6 +599,23 @@
 
               <div id="portfolioTabs" class="collapse in">
                 <ul class="portfolio">
+                  <li class="span4">
+                    <div class="item">
+                      <a
+                        href="#/portfolio"
+                        data-nav="scroll"
+                        data-toggle="collapse"
+                        data-target=".portfolioHyperion"
+                        onclick="$('#portfolioTabs').collapse('hide')"
+                      >
+                        <img src="img/projects/sykes/hyperion.png" alt="" />
+                      </a>
+
+                      <h3>Hyperion API</h3>
+
+                      <p>PHP backend API handling bookings</p>
+                    </div>
+                  </li>
                   <li class="span4">
                     <div class="item">
                       <a
