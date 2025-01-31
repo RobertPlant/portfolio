@@ -1,0 +1,6 @@
+[user]
+    email = rob@robertplant.io
+    signingkey = 4AA9F6F8686B137812505B693C2E950BF6299A93
+
+[commit]
+    gpgSign = true
