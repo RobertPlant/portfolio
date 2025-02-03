@@ -146,8 +146,82 @@
               </hgroup>
             </div>
           </div>
+
           <div class="row-fluid">
             <div class="span12 content">
+              <div class="portfolioP2PWebRTC collapse out">
+                <button
+                  type="button"
+                  class="pull-right btn btn-danger"
+                  data-toggle="collapse"
+                  data-target=".portfolioP2PWebRTC"
+                  onclick="$('#portfolioTabs').collapse('show')"
+                >
+                  Return to Portfolio List
+                </button>
+                <h2>Peer to peer WebRTC</h2>
+
+                <p><strong>When: </strong>2019 - 2020</p>
+
+                <p>
+                  <strong>Contribution: </strong>Working with a small group
+                  doing the design and development of entire system. Helping
+                  junior members of the team implement features.
+                </p>
+
+                <p>
+                  <strong>Technologies: </strong>Node.js (Signalling), WebRTC,
+                  Rust (General backend)
+                </p>
+
+                <p>
+                  <strong>Overview:</strong>
+                  Developed a peer-to-peer video conferencing solution using
+                  WebRTC, enabling real-time communication with minimal latency.
+                  Implemented STUN/TURN servers for NAT traversal, a
+                  WebSocket-based signaling server for session initiation, and
+                  secure media transmission using DTLS-SRTP, making it a core
+                  component for multiple bespoke video conferencing
+                  applications.
+                </p>
+
+                <p>
+                  <strong>Key Features & Contributions:</strong>
+                </p>
+
+                <p>
+                  This project focused on implementing a peer-to-peer (P2P)
+                  video conferencing solution using WebRTC, enabling real-time,
+                  low-latency communication without relying on centralized
+                  servers. WebRTC can connect multiple clients directly for
+                  media streaming, but establishing direct connections across
+                  various network conditions required careful handling of NAT
+                  traversal and firewall restrictions.
+                </p>
+
+                <p>
+                  To facilitate seamless connectivity, I deployed both STUN
+                  (Session Traversal Utilities for NAT) and TURN (Traversal
+                  Using Relays around NAT) servers. The STUN server was used to
+                  help clients discover their public IP addresses and determine
+                  the type of NAT they were behind, allowing for direct
+                  peer-to-peer connections in most cases. However, in scenarios
+                  where direct connectivity was not possible—such as symmetric
+                  NAT or restrictive firewalls—the TURN server acted as a relay
+                  to ensure reliable media transmission.
+                </p>
+
+                <p>
+                  Additionally, a signaling server was implemented using
+                  WebSockets to handle session initiation, exchange SDP (Session
+                  Description Protocol) offers and answers, and transmit ICE
+                  (Interactive Connectivity Establishment) candidates between
+                  peers. While WebRTC itself does not define a signaling
+                  mechanism, this server was essential for bootstrapping peer
+                  connections before they could establish direct media streams.
+                </p>
+              </div>
+
               <div class="portfolioPGP collapse out">
                 <button
                   type="button"
@@ -160,7 +234,7 @@
                 </button>
                 <h2>PGP Document Storage</h2>
 
-                <p><strong>When: 2019</strong></p>
+                <p><strong>When: </strong>2019</p>
 
                 <p>
                   <strong>Contribution: </strong>Design and development of
@@ -211,6 +285,46 @@
                   efficiency in mind, allowing for seamless document encryption
                   and retrieval while maintaining compliance with strict data
                   protection standards.
+                </p>
+
+                <p>
+                  In addition to implementing the core WebRTC infrastructure, we
+                  developed a Rust-based API to handle various non-signaling
+                  connectivity aspects, including authentication, payments, and
+                  donation processing. While WebRTC efficiently manages
+                  peer-to-peer media transmission, many conferencing
+                  applications require additional services beyond signaling—such
+                  as user management, session persistence, and monetization
+                  features. Our API provided a secure and high-performance
+                  backend to support these needs.
+                </p>
+
+                <p>
+                  Rust was chosen for its speed, memory safety, and concurrency
+                  capabilities, making it ideal for handling real-time
+                  transactions and network operations. The API exposed endpoints
+                  for processing payments and donations, ensuring seamless
+                  integration with the video conferencing platform. We utilized
+                  Stripe for payment processing, allowing users to purchase
+                  premium features, contribute to creators, or make one-time
+                  donations during a call. Webhooks and event-driven
+                  architecture enabled real-time updates, ensuring transactions
+                  were reflected instantly within the application.
+                </p>
+
+                <p>
+                  Beyond payments, the API also managed user authentication,
+                  access control, and session validation. JWT-based
+                  authentication ensured secure access to restricted features,
+                  while rate limiting and request validation mechanisms
+                  protected against abuse. The API played a crucial role in
+                  enhancing the overall conferencing experience, allowing
+                  developers to integrate monetization and security features
+                  without interfering with the core peer-to-peer communication
+                  layer. By keeping these services separate from WebRTC
+                  signaling, we maintained a clean architecture, improving
+                  maintainability and scalability across multiple projects that
+                  leveraged this conferencing solution.
                 </p>
               </div>
 
@@ -665,6 +779,22 @@
 
               <div id="portfolioTabs" class="collapse in">
                 <div class="portfolio">
+                  <div>
+                    <a
+                      href="#/portfolio"
+                      data-nav="scroll"
+                      data-toggle="collapse"
+                      data-target=".portfolioP2PWebRTC"
+                      onclick="$('#portfolioTabs').collapse('hide')"
+                    >
+                      <img src="img/projects/dotfive/p2p.png" alt="" />
+                    </a>
+
+                    <h3>P2P video conferencing with WebRTC</h3>
+
+                    <p>Node.js signalling backend</p>
+                  </div>
+
                   <div>
                     <a
                       href="#/portfolio"
