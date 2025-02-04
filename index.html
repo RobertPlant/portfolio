@@ -149,6 +149,86 @@
 
           <div class="row-fluid">
             <div class="span12 content">
+              <div class="portfolioOauth collapse out">
+                <button
+                  type="button"
+                  class="pull-right btn btn-danger"
+                  data-toggle="collapse"
+                  data-target=".portfolioOauth"
+                  onclick="$('#portfolioTabs').collapse('show')"
+                >
+                  Return to Portfolio List
+                </button>
+                <h2>OAuth synchronisation</h2>
+
+                <p><strong>When: </strong>2021</p>
+
+                <p>
+                  <strong>Contribution: </strong>Redesign and implementation of
+                  the entire client and server setup.
+                </p>
+
+                <p><strong>Technologies: </strong>Node.js, Redis</p>
+
+                <p>
+                  <strong>Overview:</strong>
+                  Redesigned the existing client-side implementation to be
+                  server-side. The reason for switching to a server-side
+                  approach was to reduce authentication errors, as only one
+                  token could be issued at a time. By handling authentication
+                  server-side, I ensured that client users shared the same
+                  token, allowing renewals to be managed at a single point.
+                </p>
+
+                <p>
+                  <strong>Key Features & Contributions:</strong>
+                </p>
+                <p>
+                  In my role, I led the transition of an existing client-side
+                  OAuth authentication system to a server-side implementation.
+                  This shift was essential to address recurring authentication
+                  errors caused by the limitation of issuing only one token at a
+                  time. By centralizing token management on the server, I
+                  ensured that multiple instances of a client user could share
+                  the same token, with renewals handled at a single, reliable
+                  point. Previously, multiple browser tabs would not work for a
+                  single user because each tab attempted to initiate OAuth
+                  independently, resulting in different tokens being issued.
+                </p>
+
+                <p>
+                  A key challenge in this project was resolving race conditions
+                  that arose during token renewal. Multiple instances attempting
+                  to refresh a token simultaneously led to conflicts, breaking
+                  authentication for users with concurrent sessions. To mitigate
+                  this, I designed a solution leveraging Redis Semaphores and
+                  Mutex locks, ensuring that the renewal process was both
+                  orderly and resistant to simultaneous requests from a single
+                  user.
+                </p>
+
+                <p>
+                  A Mutex lock was created when the first request was made for a
+                  user, and it was released once the token had been returned.
+                  Any subsequent requests made while the token was being
+                  retrieved would check the lock and return the same token once
+                  obtained. When a new tab was opened, it would retrieve the
+                  active, valid token instead of requesting a new one. Token
+                  renewals followed an identical process—where the first request
+                  would acquire the lock, and all subsequent requests would wait
+                  for the first request to complete.
+                </p>
+
+                <p>
+                  Throughout this implementation, I followed a Test-Driven
+                  Development (TDD) approach, rigorously validating each aspect
+                  of the system to ensure reliability in production. As a
+                  result, the new authentication flow has eliminated customer
+                  issues related to token renewal and significantly improved
+                  system stability.
+                </p>
+              </div>
+
               <div class="portfolioP2PWebRTC collapse out">
                 <button
                   type="button"
@@ -779,6 +859,22 @@
 
               <div id="portfolioTabs" class="collapse in">
                 <div class="portfolio">
+                  <div>
+                    <a
+                      href="#/portfolio"
+                      data-nav="scroll"
+                      data-toggle="collapse"
+                      data-target=".portfolioOauth"
+                      onclick="$('#portfolioTabs').collapse('hide')"
+                    >
+                      <img src="img/projects/odro/oauth.png" alt="" />
+                    </a>
+
+                    <h3>OAuth</h3>
+
+                    <p>Node.js and Redis OAuth syncronisation</p>
+                  </div>
+
                   <div>
                     <a
                       href="#/portfolio"
