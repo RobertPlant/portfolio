@@ -4,10 +4,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Robert Plant Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Robert Plants Portfolio - Node Developer"
-    />
+    <meta name="description" content="Robert Plant - Node Developer" />
     <meta name="author" content="rob@robertplant.io" />
     <meta charset="utf-8" />
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
@@ -272,7 +269,7 @@
                 <p>
                   This project focused on implementing a peer-to-peer (P2P)
                   video conferencing solution using WebRTC, enabling real-time,
-                  low-latency communication without relying on centralized
+                  low-latency communication without relying on centralised
                   servers. WebRTC can connect multiple clients directly for
                   media streaming, but establishing direct connections across
                   various network conditions required careful handling of NAT
@@ -340,10 +337,10 @@
                   where files were encrypted before leaving the user's browser
                   using PGP (Pretty Good Privacy). This meant that even if
                   intercepted during transmission, the files remained unreadable
-                  to unauthorized parties.
+                  to unauthorised parties.
                 </p>
                 <p>
-                  <strong>Secure Storage with AWS S3:</strong> Utilized signed
+                  <strong>Secure Storage with AWS S3:</strong> Utilised signed
                   URLs to facilitate direct uploads to Amazon S3, preventing
                   unnecessary exposure of unencrypted data to backend systems.
                 </p>
@@ -351,7 +348,7 @@
                   <strong>Hardware Security Module (HSM) Integration:</strong>
                   Allowed encryption keys to be securely managed using HSMs,
                   ensuring the highest level of protection for private keys
-                  while maintaining ease of access for authorized users.
+                  while maintaining ease of access for authorised users.
                 </p>
                 <p>
                   <strong>Zero Trust Data Protection:</strong> Even if the S3
@@ -369,14 +366,14 @@
 
                 <p>
                   In addition to implementing the core WebRTC infrastructure, we
-                  developed a Rust-based API to handle various non-signaling
+                  developed a Rust-based API to handle various non-signalling
                   connectivity aspects, including authentication, payments, and
                   donation processing. While WebRTC efficiently manages
                   peer-to-peer media transmission, many conferencing
-                  applications require additional services beyond signaling—such
-                  as user management, session persistence, and monetization
-                  features. Our API provided a secure and high-performance
-                  backend to support these needs.
+                  applications require additional services beyond
+                  signalling—such as user management, session persistence, and
+                  monetisation features. Our API provided a secure and
+                  high-performance backend to support these needs.
                 </p>
 
                 <p>
@@ -384,7 +381,7 @@
                   capabilities, making it ideal for handling real-time
                   transactions and network operations. The API exposed endpoints
                   for processing payments and donations, ensuring seamless
-                  integration with the video conferencing platform. We utilized
+                  integration with the video conferencing platform. We utilised
                   Stripe for payment processing, allowing users to purchase
                   premium features, contribute to creators, or make one-time
                   donations during a call. Webhooks and event-driven
@@ -399,10 +396,10 @@
                   while rate limiting and request validation mechanisms
                   protected against abuse. The API played a crucial role in
                   enhancing the overall conferencing experience, allowing
-                  developers to integrate monetization and security features
+                  developers to integrate monetisation and security features
                   without interfering with the core peer-to-peer communication
                   layer. By keeping these services separate from WebRTC
-                  signaling, we maintained a clean architecture, improving
+                  signalling, we maintained a clean architecture, improving
                   maintainability and scalability across multiple projects that
                   leveraged this conferencing solution.
                 </p>
@@ -425,7 +422,7 @@
                 <p>
                   <strong>Contribution: </strong> Creation of fundamental
                   systems within the API such as transformations and API
-                  integrations into external systems.
+                  integration's into external systems.
                 </p>
 
                 <p><strong>Technologies: </strong>PHP, MySQL, and RabbitMQ.</p>
@@ -440,8 +437,8 @@
                 <p>
                   This API was setup to replace existing systems and legacy API
                   endpoints and to be able to replace sections of the existing
-                  site into a system which was easier to maintain and to devleop
-                  on. The whole product was developed utilizing TDD to be able
+                  site into a system which was easier to maintain and to develop
+                  on. The whole product was developed utilising TDD to be able
                   to ensure changes were suitable and regressions were not
                   introduced.
                 </p>
