@@ -35,4 +35,5 @@ textarea {
 
 .portfolio > div {
     flex: 0 0 30%;
+    margin: 0 0 50px;
 }
